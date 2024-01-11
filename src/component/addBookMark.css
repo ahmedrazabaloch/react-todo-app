@@ -1,0 +1,14 @@
+.add-bookmark {
+  width: 450px;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+  padding: 50px;
+  font-family: "Poppins", sans-serif;
+}
+.page-title {
+  /* position: absolute; */
+  top: 15%;
+  font-weight: 700;
+  font-size: 32px;
+}
