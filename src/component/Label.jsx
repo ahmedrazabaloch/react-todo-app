@@ -1,9 +1,11 @@
 import React from "react";
 
-const Label = () => {
-  return <div>
-    <label htmlFor=""></label>
-  </div>;
+const Label = ({ value, htmlFor }) => {
+  return (
+    <div>
+      <label htmlFor={htmlFor}>{value}</label>
+    </div>
+  );
 };
 
 export default Label;
