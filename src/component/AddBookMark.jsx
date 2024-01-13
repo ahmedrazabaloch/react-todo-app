@@ -13,15 +13,13 @@ const AddBookMark = () => {
     <div className="add-bookmark">
       <img src={TITLE} alt="just a tag" />
       <p className="page-title">Bookmark your favorite sites.</p>
-      <br />
-      <div>
+      <div className="my-2">
         <Flex className="inputGroup">
           <TbWorldCode />
           <Label value={"Website Name"} htmlFor={"inputName"} />
         </Flex>
         <InputApp placeholder="Type bookmark name .." id="inputName" />
       </div>
-      <br />
       <div>
         <Flex className="inputGroup">
           <PiLinkBold />
@@ -33,7 +31,7 @@ const AddBookMark = () => {
         <button className="Btn">Submit</button>
       </div>
       <div>
-      <img src={POSTER} alt="Man Standing" />
+        <img src={POSTER} alt="Man Standing" className="posterImg" />
       </div>
     </div>
   );
