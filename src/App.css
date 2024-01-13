@@ -4,11 +4,13 @@
   box-sizing: border-box;
 }
 .App {
+  width: 1349px;
+  margin: 0 auto;
   min-height: 100vh;
   background: rgb(45,88,93);
   background: linear-gradient(121deg, rgba(45,88,93,1) 0%, rgba(149,171,173,1) 66%, rgba(255,255,255,1) 100%);
   padding: 50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
 }

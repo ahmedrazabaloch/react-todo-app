@@ -7,8 +7,25 @@ import { TbWorldCode } from "react-icons/tb";
 import { PiLinkBold } from "react-icons/pi";
 import { Flex } from "antd";
 import POSTER from "../assets/images/manStanding.png";
+import { useState } from "react";
 
 const AddBookMark = () => {
+  const [webName, SetwebName] = useState("");
+  const [webURL, SetwebURL] = useState("");
+
+  const handleWebSiteName = (event) => {
+    SetwebName(event.target.value);
+  };
+
+  const handleWebSiteURL = (event) => {
+    SetwebURL(event.target.value);
+  };
+
+  const addData = () => {
+    console.log("webName--", webName);
+    console.log("webURL--", webURL);
+  };
+
   return (
     <div className="add-bookmark">
       <img src={TITLE} alt="just a tag" />
@@ -18,19 +35,31 @@ const AddBookMark = () => {
           <TbWorldCode />
           <Label value={"Website Name"} htmlFor={"inputName"} />
         </Flex>
-        <InputApp placeholder="Type bookmark name .." id="inputName" />
+        <InputApp
+          placeholder="Type bookmark name .."
+          id="inputName"
+          value={webName}
+          onChange={handleWebSiteName}
+        />
       </div>
       <div>
         <Flex className="inputGroup">
           <PiLinkBold />
           <Label value={"Website URL"} htmlFor={"inputUrl"} />
         </Flex>
-        <InputApp placeholder="Add website URL .." id="inputUrl" />
+        <InputApp
+          placeholder="Add website URL .."
+          id="inputUrl"
+          value={webURL}
+          onChange={handleWebSiteURL}
+        />
       </div>
       <div className="btnContainer">
-        <button className="Btn">Submit</button>
+        <button className="Btn" onClick={addData}>
+          Submit
+        </button>
       </div>
-      <div>
+      <div className="imgContainer">
         <img src={POSTER} alt="Man Standing" className="posterImg" />
       </div>
     </div>

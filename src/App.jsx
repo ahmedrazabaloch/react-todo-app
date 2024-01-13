@@ -5,8 +5,12 @@ import TableApp from "./component/Tables.jsx";
 function App() {
   return (
     <div className="App">
-      <AddBookMark />
-      <TableApp />
+      <div>
+        <AddBookMark />
+      </div>
+      <div style={{ width: "600px"}}>
+        <TableApp />
+      </div>
     </div>
   );
 }
